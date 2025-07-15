@@ -1,0 +1,14 @@
+# Utiliser l'image Docker officielle du projet
+FROM gyoridavid/short-video-maker:latest-tiny
+
+# Exposer le port 3123
+EXPOSE 3123
+
+# Variables d'environnement par défaut
+ENV PORT=3123
+ENV LOG_LEVEL=info
+ENV CONCURRENCY=1
+ENV VIDEO_CACHE_SIZE_IN_BYTES=2097152000
+
+# L'image contient déjà la commande de démarrage
+# Pas besoin de redéfinir CMD
